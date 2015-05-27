@@ -13,7 +13,7 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
-func decorateForBlog(doc *goquery.Document, baseUri string, idPrefix string) {
+func decorateDocForBlog(doc *goquery.Document, baseUri string, idPrefix string) {
 	doc.Find("a").Each(func(_ int, s *goquery.Selection) {
 		href, _ := s.Attr("href")
 		if !strings.HasPrefix(href, "#") {
@@ -70,7 +70,7 @@ func main() {
 	rd := strings.NewReader(out.String())
 	doc, _ := goquery.NewDocumentFromReader(rd)
 	idPrefix := strings.Replace(docId, "/", "_", -1)
-	decorateForBlog(doc, baseUri, idPrefix)
+	decorateDocForBlog(doc, baseUri, idPrefix)
 	title, body := getBlogContent(doc)
 	fmt.Println("title: " + title)
 	fmt.Println(strings.Join([]string{"<div class=\"review-post\">", body, "</div>"}, ""))
