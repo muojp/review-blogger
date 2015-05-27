@@ -46,15 +46,16 @@ func getBlogContent(inDoc *goquery.Document) (string, string) {
 }
 
 func main() {
-	if len(os.Args) < 2 {
-		fmt.Println("usage: review-blogger 1505_target-file.re")
+	if len(os.Args) < 3 {
+		fmt.Println("usage: review-blogger 1505_target-file.re http://example.com/")
 		os.Exit(1)
 	}
 	fileName := os.Args[1]
+	siteUri := os.Args[2]
 	absPath, _ := filepath.Abs(fileName)
 	r, _ := regexp.Compile("^(\\d{2})(\\d{2})_(.+)\\.re$")
-	docId := r.ReplaceAllString(fileName, "$1/$2/$3")
-	baseUri := "/" + docId + ".html"
+	docId := r.ReplaceAllString(fileName, "20$1/$2/$3")
+	baseUri := siteUri + docId + ".html"
 	compiler, err := exec.LookPath("review-compile")
 	if err != nil {
 		log.Fatal(err)
