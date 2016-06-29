@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xmlns:ops="http://www.idpf.org/2007/ops" xml:lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  <meta name="generator" content="Re:VIEW" />
+  <title>Hey!</title>
+</head>
+<body>
+<h1><span class="secno"></span>Hey!</h1>
+<p>hello.</p>
+<p><a href="http://www.example.com" class="link">http://www.example.com</a> is great.<a id="fnb-fn1" href="#fn-fn1" class="noteref" epub:type="noteref">*1</a></p>
+<p>Ah, please check out <a href="/2016/06/my-ever-best-article.html">ever best?</a>.</p>
+<div class="footnote" epub:type="footnote" id="fn-fn1"><p class="footnote">[*1] at least for me</p></div>
+</body>
+</html>
