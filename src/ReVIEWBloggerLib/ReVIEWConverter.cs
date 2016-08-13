@@ -20,7 +20,7 @@ namespace ReVIEWBlogger
             {
                 WorkingDirectory = absDirectory, // care for cases currdir != targetdir
                 FileName = "review-compile",
-                Arguments = $"--target=html {filename}",
+                Arguments = $"--target=html {Path.GetFileName(filename)}",
                 RedirectStandardOutput = true
             };
             var p = Process.Start(psi);

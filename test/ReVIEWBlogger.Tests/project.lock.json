@@ -18498,7 +18498,7 @@
     "": [
       "NETStandard.Library >= 1.5.0-rc2-24027",
       "NUnit >= 3.2.1",
-      "ReVIEWBloggerLib >= 1.0.0",
+      "ReVIEWBloggerLib >= 1.0.0-alpha",
       "dotnet-test-nunit >= 3.4.0-alpha-1"
     ],
     ".NETStandard,Version=v1.5": []
