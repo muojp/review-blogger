@@ -1958,7 +1958,7 @@
           "lib/netstandard1.3/_._": {}
         }
       },
-      "ReVIEWBloggerLib/1.0.0-alpha": {
+      "ReVIEWBloggerLib/1.0.0-alpha2": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v1.0",
         "dependencies": {
@@ -6558,7 +6558,7 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "ReVIEWBloggerLib/1.0.0-alpha": {
+    "ReVIEWBloggerLib/1.0.0-alpha2": {
       "type": "project",
       "path": "../ReVIEWBloggerLib/project.json"
     }
@@ -6566,7 +6566,7 @@
   "projectFileDependencyGroups": {
     "": [
       "Microsoft.NETCore.App >= 1.0.0-rc2-3002702",
-      "ReVIEWBloggerLib >= 1.0.0-alpha"
+      "ReVIEWBloggerLib >= 1.0.0-alpha2"
     ],
     ".NETCoreApp,Version=v1.0": []
   },

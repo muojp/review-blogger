@@ -3,7 +3,7 @@
   "authors": [ "@muo_jp" ],
   "copyright": "@muo_jp, 2016",
   "description": "Simple Re:VIEW documents -> Blogger posting utility",
-  "version": "1.0.0-alpha4",
+  "version": "1.0.0-alpha5",
   "buildOptions" : {
     "emitEntryPoint": true,
     "outputName": "dotnet-save-draft"
@@ -24,7 +24,7 @@
       "type": "platform",
       "version": "1.0.0-rc2-3002702"
     },
-    "ReVIEWBloggerLib": "1.0.0-alpha"
+    "ReVIEWBloggerLib": "1.0.0-alpha2"
   },
   "frameworks": {
     "netcoreapp1.0": {
