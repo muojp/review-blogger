@@ -1,4 +1,4 @@
-# Re:VIEWのファイルをBloggerへ流し込めるようにするやつ
+# Re:VIEWファイルをBloggerへ流し込むやつ
 
 ## 機能
 
@@ -16,7 +16,7 @@ footnoteに付与するid属性を記事横断でユニークにしたり、Blog
 
 ### project.jsonファイルを作成
 
-Re:VIEWのarticlesをディレクトリに、次の内容の`project.json`ファイルを作成します。
+Re:VIEWのarticlesディレクトリに、次の内容の`project.json`ファイルを作成します。
 
 ```
 {
