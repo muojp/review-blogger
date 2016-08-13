@@ -1,0 +1,4 @@
+<p>hello.</p>
+<p><a href="http://www.example.com" class="link">http://www.example.com</a> is great.<a id="idprefixfnb-fn1" href="http://www.muo.jp/foo/bar#fn-fn1" class="noteref">*1</a></p>
+<p>Ah, please check out <a href="http://www.muo.jp/2016/06/my-ever-best-article.html">ever best?</a>.</p>
+<div class="footnote" id="idprefixfn-fn1"><p class="footnote">[<a href="http://www.muo.jp/foo/bar#fnb-fn1">*1</a>] at least for me</p></div>

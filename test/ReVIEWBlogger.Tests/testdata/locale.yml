@@ -1,0 +1,6 @@
+locale: ja
+chapter: ""
+chapter_postfix: ""
+chapter_quote: "%s"
+format_number: "%2$d"
+format_number_header: "%2$d"

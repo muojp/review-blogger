@@ -1,0 +1,34 @@
+{
+  "name": "ReVIEWBlogger",
+  "authors": [ "@muo_jp" ],
+  "copyright": "@muo_jp, 2016",
+  "description": "Simple Re:VIEW documents -> Blogger posting utility",
+  "version": "1.0.0-alpha5",
+  "buildOptions" : {
+    "emitEntryPoint": true,
+    "outputName": "dotnet-save-draft"
+  },
+  "packOptions": {
+    "summary": "ReVIEW to Blogger",
+    "owners": [ "@muo_jp" ],
+    "projectUrl": "https://github.com/muojp/review-blogger",
+    "tags": [ "blog", "blogger", "tool" ],
+    "licenseUrl": "https://opensource.org/licenses/MIT",
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/muojp/review-blogger.git"
+    }
+  },
+  "dependencies": {
+    "Microsoft.NETCore.App": {
+      "type": "platform",
+      "version": "1.0.0-rc2-3002702"
+    },
+    "ReVIEWBloggerLib": "1.0.0-alpha2"
+  },
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": "dnxcore50"
+    }
+  }
+}
