@@ -1,4 +1,6 @@
-﻿namespace ReVIEWBlogger
+﻿using ReVIEWBlogger;
+
+namespace ReVIEWBloggerTool
 {
     public class Program
     {

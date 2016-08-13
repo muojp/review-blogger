@@ -2311,7 +2311,7 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
-      "ReVIEWBlogger/1.0.0": {
+      "ReVIEWBloggerLib/1.0.0-alpha": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v1.0",
         "dependencies": {
@@ -4921,7 +4921,7 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
-      "ReVIEWBlogger/1.0.0": {
+      "ReVIEWBloggerLib/1.0.0-alpha": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v1.0",
         "dependencies": {
@@ -7529,7 +7529,7 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
-      "ReVIEWBlogger/1.0.0": {
+      "ReVIEWBloggerLib/1.0.0-alpha": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v1.0",
         "dependencies": {
@@ -10089,7 +10089,7 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
-      "ReVIEWBlogger/1.0.0": {
+      "ReVIEWBloggerLib/1.0.0-alpha": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v1.0",
         "dependencies": {
@@ -12649,7 +12649,7 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
-      "ReVIEWBlogger/1.0.0": {
+      "ReVIEWBloggerLib/1.0.0-alpha": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v1.0",
         "dependencies": {
@@ -18489,16 +18489,16 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "ReVIEWBlogger/1.0.0": {
+    "ReVIEWBloggerLib/1.0.0-alpha": {
       "type": "project",
-      "path": "../../src/ReVIEWBlogger/project.json"
+      "path": "../../src/ReVIEWBloggerLib/project.json"
     }
   },
   "projectFileDependencyGroups": {
     "": [
       "NETStandard.Library >= 1.5.0-rc2-24027",
       "NUnit >= 3.2.1",
-      "ReVIEWBlogger >= 1.0.0",
+      "ReVIEWBloggerLib >= 1.0.0",
       "dotnet-test-nunit >= 3.4.0-alpha-1"
     ],
     ".NETStandard,Version=v1.5": []

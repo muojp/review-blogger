@@ -40,5 +40,14 @@ namespace ConsoleApplication
             Assert.AreEqual(File.ReadAllText("foo.blogger.entry.title.expected.txt"), r.Item1);
             Assert.AreEqual(File.ReadAllText("foo.blogger.entry.content.expected.txt"), r.Item2);
         }
+
+        [Test]
+        public void TestCompilingDocumentWithImages()
+        {
+            var c = new ReVIEWConverter();
+            var actualOutput = c.CompileDocument("1608_bar.re");
+            // File.WriteAllText("bar.re.actual.xml", actualOutput);
+            Assert.AreEqual(File.ReadAllText("bar.expected.xml"), actualOutput);
+        }
     }
 }

@@ -5,13 +5,23 @@
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="Re:VIEW" />
-  <title>Hey!</title>
+  <title>Bar!</title>
 </head>
 <body>
-<h1><span class="secno"></span>Hey!</h1>
-<p>hello.</p>
-<p><a href="http://www.example.com" class="link">http://www.example.com</a> is great.<a id="fnb-fn1" href="#fn-fn1" class="noteref">*1</a></p>
-<p>Ah, please check out <a href="/2016/06/my-ever-best-article.html">ever best?</a>.</p>
-<div class="footnote" id="fn-fn1"><p class="footnote">[<a href="#fnb-fn1">*1</a>] at least for me</p></div>
+<h1><span class="secno"></span>Bar!</h1>
+<p>Here's an image (図1).</p>
+<div id="myimg1" class="image">
+<img src="images/myimg1.png" alt="My Image" />
+<p class="caption">
+図1 My Image
+</p>
+</div>
+<p>And here's another (図2).</p>
+<div id="myimg2" class="image">
+<img src="images/myimg2.png" alt="My Image 2" />
+<p class="caption">
+図2 My Image 2
+</p>
+</div>
 </body>
 </html>
