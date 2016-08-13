@@ -6,34 +6,52 @@ https://github.com/muojp/review-blog-template/ のテンプレに従って記述
 
 footnoteに付与するid属性を記事横断でユニークにしたり、Blogger editorのURI変換によってリンクが壊れがちな箇所を回避したり、という機能を持ちます。
 
-この先はBlogger APIを使ってドラフトの自動保存やカスタムURL設定あたりまでできるようにしたいところです。
-
-インストール方法や使い方など、go全然慣れてない状態で書いたので流儀的におかしいかもしれません。指摘頂けると幸いです。
-
 ## 必要なもの(確認済み環境)
 
-- Mac OS X 10.10
-- go 1.4.2
-- review-compile 1.5.0
+- Mac OS X 10.11.6
+- .NET Core 1.0
+- review-compile 1.6.0 (2.0.0の仕様変更によって図版の採番機能が動作しないことがわかっています)
  
 ## インストール方法
 
+### project.jsonファイルを作成
+
+Re:VIEWのarticlesをディレクトリに、次の内容の`project.json`ファイルを作成します。
+
 ```
-$ go get github.com/muojp/review-blogger
-$ go install github.com/muojp/review-blogger
+{
+  "tools": {
+    "ReVIEWBlogger": {
+      "version": "1.0.0-alpha5",
+      "imports": ["dnxcore50"]
+    }
+  },
+  "frameworks": {
+    "netcoreapp1.0": {}
+  }
+}
 ```
 
-※あらかじめ`GOBIN`環境変数を設定しておいてください
+### 必要な依存パッケージの取得
+
+コマンド一発です。
+
+```
+$ dotnet restore
+```
+
 
 ## 使い方
 
 ```
-$ review-blogger 1505_my-ever-best-blog-entry.re | pbcopy
+$ dotnet save-draft 1505_my-ever-best-blog-entry.re
 ```
 
-1行目はタイトル、2行目以降が本文(BloggerのHTMLエディタへそのまま貼り付ける用)です。
+これで、指定した`.re`ファイルがHTMLへ変換されてBloggerへ下書き保存されます。
 
-画像の貼り付けなどはサポートしていないので、HTMLエディタへ貼り付けた後でビジュアル編集モードを使ってほどよく貼り付けてください(そもそもBloggerは画像アップロードAPIを持ちません)。
+TODO: authあたりのやり方を書く
+
+画像の貼り付けはサポートしていないので、HTMLエディタへ貼り付けた後でビジュアル編集モードを使ってほどよく貼り付けてください(そもそもBloggerは画像アップロードAPIを持ちません)。
 
 ## ライセンス
 
