@@ -2,9 +2,9 @@
 
 ## 機能
 
-https://github.com/muojp/review-blog-template/ のテンプレに従って記述した.reファイル(Re:VIEWドキュメント)をBloggerへ流し込むのに適した形式へと変換します。
+https://github.com/muojp/review-blog-template/ のテンプレートに従って記述した.reファイル(Re:VIEWドキュメント)をBloggerへ流し込むのに適した形式へと変換します。
 
-footnoteに付与するid属性を記事横断でユニークにしたり、Blogger editorのURI変換によってリンクが壊れがちな箇所を回避したり、という機能を持ちます。
+脚注に付与するid属性を記事横断でユニークにしたり、Blogger editorのURI変換によってリンクが壊れがちな箇所を回避したり、という機能を持ちます。
 
 ## 必要なもの(確認済み環境)
 
@@ -16,7 +16,7 @@ footnoteに付与するid属性を記事横断でユニークにしたり、Blog
 
 ### project.jsonファイルを作成
 
-Re:VIEWのarticlesディレクトリに、次の内容の`project.json`ファイルを作成します。
+Re:VIEWのarticlesディレクトリに、`project.json`ファイルを次の内容で作成します。
 
 ```
 {
@@ -32,7 +32,7 @@ Re:VIEWのarticlesディレクトリに、次の内容の`project.json`ファイ
 }
 ```
 
-### 必要な依存パッケージの取得
+### 依存パッケージの取得
 
 コマンド一発です。
 
