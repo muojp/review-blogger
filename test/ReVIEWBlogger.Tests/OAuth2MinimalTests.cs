@@ -1,6 +1,5 @@
 using NUnit.Framework;
 using ReVIEWBlogger;
-using System.IO;
 
 namespace ConsoleApplication
 {
