@@ -5,6 +5,7 @@ using System.Text;
 using System.Xml.Linq;
 using CenterCLR.Sgml;
 using System.Linq;
+using System.Runtime.InteropServices;
 
 namespace ReVIEWBlogger
 {
@@ -16,15 +17,25 @@ namespace ReVIEWBlogger
         public string CompileDocument(string filename, int timeoutMilliSec = DEFAULT_TIMEOUT_MS)
         {
             var absDirectory = Path.GetDirectoryName(Path.GetFullPath(filename));
+
             var psi = new ProcessStartInfo
             {
                 WorkingDirectory = absDirectory, // care for cases currdir != targetdir
-                FileName = "review-compile",
-                Arguments = $"--target=html {Path.GetFileName(filename)}",
                 RedirectStandardOutput = true
             };
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                psi.FileName = "cmd.exe";
+                psi.Arguments = $"/C review-compile --target=html {Path.GetFileName(filename)}";
+            }
+            else
+            {
+                psi.FileName = "review-compile";
+                psi.Arguments = $"--target=html {Path.GetFileName(filename)}";
+            }
+
             var p = Process.Start(psi);
-            var content = p.StandardOutput.ReadToEnd();
+            var content = p.StandardOutput.ReadToEnd().Replace("\r\n", "\n");
             // TODO: also handle StandardError
             p.WaitForExit(timeoutMilliSec);
 
