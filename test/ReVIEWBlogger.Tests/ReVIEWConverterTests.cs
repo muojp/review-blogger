@@ -13,7 +13,7 @@ namespace ConsoleApplication
             var c = new ReVIEWConverter();
             var actualOutput = c.CompileDocument("testdata/1606_foo.re");
             // File.WriteAllText("testdata/foo.re.actual.xml", actualOutput);
-            Assert.AreEqual(File.ReadAllText("testdata/foo.expected.xml"), actualOutput);
+            Assert.AreEqual(File.ReadAllText("testdata/foo.expected.xml"), actualOutput.Replace("\r\n", "\n"));
         }
 
         [Test]
@@ -24,7 +24,7 @@ namespace ConsoleApplication
             c.LoadPrecompiledDocument(src);
             var actual = c.DecorateForBlogger("http://www.muo.jp/", "http://www.muo.jp/foo/bar", "idprefix").ToString();
             // File.WriteAllText("testdata/foo.blogger.actual.txt", actual);
-            Assert.AreEqual(File.ReadAllText("testdata/foo.blogger.expected.txt"), actual);
+            Assert.AreEqual(File.ReadAllText("testdata/foo.blogger.expected.txt"), actual.Replace("\r\n", "\n"));
         }
 
         [Test]
@@ -37,8 +37,8 @@ namespace ConsoleApplication
             var r = c.ExtractTitleAndContent();
             // File.WriteAllText("testdata/foo.blogger.entry.title.actual.txt", r.Item1);
             // File.WriteAllText("testdata/foo.blogger.entry.content.actual.txt", r.Item2);
-            Assert.AreEqual(File.ReadAllText("testdata/foo.blogger.entry.title.expected.txt"), r.Item1);
-            Assert.AreEqual(File.ReadAllText("testdata/foo.blogger.entry.content.expected.txt"), r.Item2);
+            Assert.AreEqual(File.ReadAllText("testdata/foo.blogger.entry.title.expected.txt"), r.Item1.Replace("\r\n", "\n"));
+            Assert.AreEqual(File.ReadAllText("testdata/foo.blogger.entry.content.expected.txt"), r.Item2.Replace("\r\n", "\n").TrimStart());
         }
 
         [Test]
@@ -47,7 +47,7 @@ namespace ConsoleApplication
             var c = new ReVIEWConverter();
             var actualOutput = c.CompileDocument("testdata/1608_bar.re");
             // File.WriteAllText("testdata/bar.re.actual.xml", actualOutput);
-            Assert.AreEqual(File.ReadAllText("testdata/bar.expected.xml"), actualOutput);
+            Assert.AreEqual(File.ReadAllText("testdata/bar.expected.xml").Replace("\r\n", "\n"), actualOutput.Replace("\r\n", "\n"));
         }
     }
 }
