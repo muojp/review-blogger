@@ -8,7 +8,7 @@ https://github.com/muojp/review-blog-template/ のテンプレートに従って
 
 ## 必要なもの(確認済み環境)
 
-- Mac OS X 10.11.6
+- Mac OS X 10.11.6(またはWindows 10)
 - .NET Core 1.0
 - review-compile 1.6.0 (2.0.0の仕様変更によって図版の採番機能が動作しないことがわかっています)
  
@@ -22,7 +22,7 @@ Re:VIEWのarticlesディレクトリに、`project.json`ファイルを次の内
 {
   "tools": {
     "ReVIEWBlogger": {
-      "version": "1.0.0-alpha5",
+      "version": "1.0.0-alpha6",
       "imports": ["dnxcore50"]
     }
   },
